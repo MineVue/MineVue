@@ -1,16 +1,5 @@
 <template>
     <div id="root">
-        <hello></hello>
+        <router-view></router-view>
     </div>
 </template>
-
-<script>
-    import Hello from './components/Hello/Hello.vue';
-
-    export default {
-        name: 'root',
-        components: {
-            Hello
-        }
-    }
-</script>
