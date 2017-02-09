@@ -3,10 +3,15 @@
         <div id="page-container" class="page-container page-header-fixed page-side-bar-fixed page-with-two-sidebar">
             <div id="header" class="header navbar navbar-default navbar-fixed-top">
                 <div class="container-flud">
-                    <!-- <div class="navbar-header">
+                    <div class="navbar-header">
                         <a href="#">CM Admin</a>
+                        <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                    <ul class="nav navbar-nav navbar-right">
+                    <!-- <ul class="nav navbar-nav navbar-right">
                         <li>
                             <form class="navbar-form form-input-flat">
                                 <div class="form-group">
@@ -22,11 +27,6 @@
                 <div data-height="100%">
                     <ul class="nav">
                         <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === 1}" v-on:click="controlActiveClass($event)">
-                            <strong>
-                                <a href="#">
-                                    1
-                                </a>
-                            </strong>
                             <a href="#">1</a>
                             <ul class="sub-menu">
                                 <li>
@@ -47,7 +47,6 @@
                             </ul>
                         </li>
                         <li class="has-sub" data-no="2" v-bind:class="{ active: activeMenu === 2}" v-on:click="controlActiveClass($event)">
-                            <strong></strong>
                             <a href="#">2</a>
                             <ul class="sub-menu">
                                 <li>
@@ -68,7 +67,6 @@
                             </ul>
                         </li>
                         <li class="has-sub" data-no="3" v-bind:class="{ active: activeMenu === 3 }" v-on:click="controlActiveClass($event)">
-                            <strong></strong>
                             <a href="#">3</a>
                             <ul class="sub-menu">
                                 <li>
@@ -89,7 +87,6 @@
                             </ul>
                         </li>
                         <li class="has-sub" data-no="4" v-bind:class="{ active: activeMenu === 4 }" v-on:click="controlActiveClass($event)">
-                            <strong></strong>
                             <a href="#">4</a>
                             <ul class="sub-menu">
                                 <li>
@@ -110,7 +107,6 @@
                             </ul>
                         </li>
                         <li class="has-sub" data-no="5" v-bind:class="{ active: activeMenu === 5 }" v-on:click="controlActiveClass($event)">
-                            <strong></strong>
                             <a href="#">5</a>
                             <ul class="sub-menu">
                                 <li>
@@ -131,7 +127,6 @@
                             </ul>
                         </li>
                         <li class="has-sub" data-no="6" v-bind:class="{ active: activeMenu === 6 }" v-on:click="controlActiveClass($event)">
-                            <strong></strong>
                             <a href="#">6</a>
                             <ul class="sub-menu">
                                 <li>
@@ -152,7 +147,6 @@
                             </ul>
                         </li>
                         <li class="has-sub" data-no="7" v-bind:class="{ active: activeMenu === 7 }" v-on:click="controlActiveClass($event)">
-                            <strong></strong>
                             <a href="#">7</a>
                             <ul class="sub-menu">
                                 <li>
@@ -364,6 +358,9 @@
         height: 0;
     }
     @media (max-width: 767px) {
+        .navbar {
+            min-height: 48px !important;
+        }
         .navbar-nav {
             margin: 0;
         }
@@ -480,32 +477,9 @@
     @media (max-width: 767px) {
         .sidebar,
         .sidebar-bg {
-            position: absolute;
-            left: 0;
-            top: 51px;
-            background: #3C454D;
-            width: 50px;
-            font-size: 13px;
-            font-weight: 300;
-        }
-
-        .nav li a {
             display: none;
         }
 
-        .nav li strong {
-            display: block;
-            position:relative;
-            background: #fff;
-            width: 30px;
-            margin: 10px auto;
-            border-radius: 20px;
-        }
-
-        .nav li strong:after {
-            width: 30px;
-            height: 30px;
-        }
         @keyframes sidebarSlideInLeft {
             from { left: -250px; }
             to { left: 0; }
