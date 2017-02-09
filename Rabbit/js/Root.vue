@@ -5,7 +5,7 @@
                 <div class="container-flud">
                     <div class="navbar-header">
                         <a href="#">CM Admin</a>
-                        <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -475,9 +475,12 @@
         bottom: 0;
     }
     @media (max-width: 767px) {
-        .sidebar,
+        .sidebar {
+            width: 100%;
+        }
+
         .sidebar-bg {
-            display: none;
+            display:none;
         }
 
         @keyframes sidebarSlideInLeft {
