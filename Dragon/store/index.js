@@ -3,33 +3,17 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-const state = {
-    currentThreadID: null,
-    threads: {
-        /*
-         id: {
-         id,
-         name,
-         messages: [...ids],
-         lastMessage
-         }
-         */
-    },
-    messages: {
-        /*
-         id: {
-         id,
-         threadId,
-         threadName,
-         authorName,
-         text,
-         timestamp,
-         isRead
-         }
-         */
-    }
-}
-
 export default new Vuex.Store({
-    state
-})
+    state: {
+        comments_A: ['hi'],
+        comments_B: []
+    },
+    mutations: {
+        addCommentToA (state) {
+
+        },
+        addCommentToB (state) {
+
+        }
+    }
+});

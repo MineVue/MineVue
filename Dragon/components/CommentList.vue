@@ -1,24 +1,7 @@
 <template>
-    <div id="app">
-        Clicked: {times, count is}}.
-        <button @click="increment">+</button>
-    <button @click="decrement">-</button>
-<button @click="incrementIfOdd">Increment if odd</button>
-<button @click="incrementAsync">Increment async</button>
+<div class="app">
+  <div>{{  $store.state.comments_A[0] }}</div>
 </div>
 </template>
 
-<script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-    computed: mapGetters([
-        'evenOrOdd'
-    ]),
-    methods: mapActions([
-        'increment',
-        'decrement',
-        'incrementIfOdd',
-        'incrementAsync'
-    ])
-}
-</script>
+export default {};
