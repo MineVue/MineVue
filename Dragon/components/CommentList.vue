@@ -1,7 +1,11 @@
 <template>
-<div class="app">
-  <div>{{  $store.state.comments_A[0] }}</div>
+<div class="app" style="border: 1px solid">
+  <div v-for="msg in list">{{ msg }}</div>
 </div>
 </template>
 
-export default {};
+<script>
+export default {
+  props: ['list']
+};
+</script>

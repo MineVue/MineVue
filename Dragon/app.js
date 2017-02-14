@@ -1,11 +1,12 @@
 import Vue from 'vue';
-import CommentList from './components/CommentList.vue';
+import Plalab from './components/Plalab.vue';
 import store from './store';
 
 Vue.config.debug = true;
 
+// npm의 vue는 runtime-only build
 const app = new Vue({
     el: '#app',
     store,
-    render: (h) => { return h(CommentList) }
+    render: (h) => { return h(Plalab) }
 });
