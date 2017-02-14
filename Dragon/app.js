@@ -7,5 +7,5 @@ Vue.config.debug = true;
 const app = new Vue({
     el: '#app',
     store,
-    render: h => h(CommentList)
+    render: (h) => { return h(CommentList) }
 });

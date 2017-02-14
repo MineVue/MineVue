@@ -1,4 +1,5 @@
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: "./app.js",
@@ -33,5 +34,11 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         compress: true,
         port: 9000
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            title: 'Vuex Study',
+            template: './index.html'
+        })
+    ]
 };
