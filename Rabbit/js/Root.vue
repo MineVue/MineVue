@@ -26,6 +26,7 @@
             <div id="sidebar" class="sidebar">
                 <div data-height="100%">
                     <ul class="nav">
+
                         <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === 1}" v-on:click="controlActiveClass($event)">
                             <a href="#">1</a>
                             <ul class="sub-menu">
@@ -46,126 +47,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="has-sub" data-no="2" v-bind:class="{ active: activeMenu === 2}" v-on:click="controlActiveClass($event)">
-                            <a href="#">2</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub" data-no="3" v-bind:class="{ active: activeMenu === 3 }" v-on:click="controlActiveClass($event)">
-                            <a href="#">3</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub" data-no="4" v-bind:class="{ active: activeMenu === 4 }" v-on:click="controlActiveClass($event)">
-                            <a href="#">4</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub" data-no="5" v-bind:class="{ active: activeMenu === 5 }" v-on:click="controlActiveClass($event)">
-                            <a href="#">5</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub" data-no="6" v-bind:class="{ active: activeMenu === 6 }" v-on:click="controlActiveClass($event)">
-                            <a href="#">6</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="has-sub" data-no="7" v-bind:class="{ active: activeMenu === 7 }" v-on:click="controlActiveClass($event)">
-                            <a href="#">7</a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -175,12 +57,19 @@
 </template>
 
 <script>
+    import store from '../store';
+    import { fetchMenuList } from './actions/main';
     export default {
         data: () => {
             return {
                 activeMenu: 1
             }
         },
+
+        mounted: {
+
+        },
+
         methods: {
             controlActiveClass (e) {
                 e.preventDefault();

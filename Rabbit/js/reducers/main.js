@@ -1,15 +1,15 @@
+import MAIN_ACTION from '../actions/main.js';
+
 const INITIAL_STATE = {
-  test: {
-    test1
-  }
+  list: []
 }
 
-export default function todos(state = INITIAL_STATE, action) {
+export default function main(state = INITIAL_STATE, action) {
   switch (action.type) {
-    case 'TEST_ACTION':
+    case MAIN_ACTION.FETCH_MENU_LIST_END :
       return Object.assign({}, state, {
-        test1: 'test2'
-      })
+        list: action.list
+      });
     default:
       return state
   }
