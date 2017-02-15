@@ -27,22 +27,12 @@
                 <div data-height="100%">
                     <ul class="nav">
 
-                        <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === 1}" v-on:click="controlActiveClass($event)">
-                            <a href="#">1</a>
+                        <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === 1}" v-on:click="controlActiveClass($event)" v-for="menu in menuList">
+                            <a href="#">{menu.title}</a>
                             <ul class="sub-menu">
-                                <li>
+                                <li v-for="sub in menu.submenu">
                                     <a href="">
-                                        1
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        2
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        3
+                                        {sub}
                                     </a>
                                 </li>
                             </ul>
@@ -61,14 +51,17 @@
     import { fetchMenuList } from './actions/main';
     export default {
         data: () => {
+            const state = store.store.getState().main;
+            console.log(state);
             return {
-                activeMenu: 1
+                activeMenu: 1,
+                menuList: state.list
             }
         },
 
         mounted: () => {
             console.log(store.actions);
-            store.actions.fetchMenuList();
+            store.dispatch(store.actions.fetchMenuList());
         },
 
         methods: {
