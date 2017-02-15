@@ -1,4 +1,4 @@
-import MAIN_ACTION from '../actions/main.js';
+import * as MAIN_ACTION from '../actions/main';
 
 const INITIAL_STATE = {
   list: []

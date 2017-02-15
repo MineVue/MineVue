@@ -1,8 +1,8 @@
 import Vue from 'vue';
 import Revue from 'revue';
-import { createStore, applyMiddleware } from 'redux';
-import reducer from 'reducers/index';
+import { createStore, applyMiddleware } from 'redux';;
 import thunk from 'redux-thunk';
+import reducer from './reducers/index'
 import * as actions from './actions/main';
 
 const createStoreWithMiddleware = applyMiddleware(
@@ -12,9 +12,5 @@ const createStoreWithMiddleware = applyMiddleware(
 const reduxStore = createStoreWithMiddleware(reducer);
 
 const store = new Revue(Vue, reduxStore, actions);
-
-if (typeof __DEV__ !== 'undefined' && __DEV__) {
-	window.store = store
-}
 
 export default store

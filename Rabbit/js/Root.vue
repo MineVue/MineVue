@@ -57,7 +57,7 @@
 </template>
 
 <script>
-    import store from '../store';
+    import store from './store';
     import { fetchMenuList } from './actions/main';
     export default {
         data: () => {
@@ -66,8 +66,9 @@
             }
         },
 
-        mounted: {
-
+        mounted: () => {
+            console.log(store.actions);
+            store.actions.fetchMenuList();
         },
 
         methods: {

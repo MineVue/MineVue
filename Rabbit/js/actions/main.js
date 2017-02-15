@@ -1,7 +1,6 @@
-const TEST_ACTION = 'TEST_ACTION';
-const FETCH_MENU_LIST_END = 'FETCH_MENU_LIST_END';
-
-export fetchMenuList = () => {
+export const TEST_ACTION = 'TEST_ACTION';
+export const FETCH_MENU_LIST_END = 'FETCH_MENU_LIST_END';
+export const fetchMenuList = () => {
 	return (dispatch, getState) => {
 	    // the following line is always an async ajax call, like:
 	    // return fetch().then().then(data => dispatch(addedTodo(data)))

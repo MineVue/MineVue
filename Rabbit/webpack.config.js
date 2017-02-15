@@ -55,13 +55,13 @@ var common = {
                 test: /\.ttf$/,
                 loader: "file-loader"
             },
-            { 
+            {
                 test: /\.eot$/,
-                loader: "file-loader" 
+                loader: "file-loader"
             },
-            { 
+            {
                 test: /\.svg$/,
-                loader: "file-loader" 
+                loader: "file-loader"
             }
         ]
     },

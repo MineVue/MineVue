@@ -1,35 +1,35 @@
 {
-	'menuList': [
+	"list": [
 		{
-			title: '1',
-			submenu: [
-				'1',
-				'2',
-				'3'
+			"title": "1",
+			"submenu": [
+				"1",
+				"2",
+				"3"
 			]
 		},
 		{
-			title: '1',
-			submenu: [
-				'1',
-				'2',
-				'3'
+			"title": "2",
+			"submenu": [
+				"4",
+				"5",
+				"6"
 			]
 		},
 		{
-			title: '1',
-			submenu: [
-				'1',
-				'2',
-				'3'
+			"title": "3",
+			"submenu": [
+				"7",
+				"8",
+				"9"
 			]
 		},
 		{
-			title: '1',
-			submenu: [
-				'1',
-				'2',
-				'3'
+			"title": "4",
+			"submenu": [
+				"10",
+				"11",
+				"12"
 			]
 		}
 	]
