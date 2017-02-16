@@ -6,11 +6,14 @@ import Hello from './components/Hello/Hello.vue';
 
 Vue.use(VueRouter);
 
+window.Vue = Vue;
+
 const router = new VueRouter({
 	routes: [
 		{path: '/', component: Hello}
 	]
 })
+
 new Vue({
     el: '#app',
     router,

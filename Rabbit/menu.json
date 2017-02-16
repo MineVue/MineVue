@@ -1,35 +1,43 @@
 {
 	"list": [
 		{
-			"title": "1",
+			"title": "Dash board",
+			"active": "1",
 			"submenu": [
-				"1",
-				"2",
-				"3"
+				"Dash board V1",
+				"Dash board V2"
 			]
 		},
 		{
-			"title": "2",
+			"title": "Tables",
+			"active": "2",
 			"submenu": [
-				"4",
-				"5",
-				"6"
+				"Basic Table"
 			]
 		},
 		{
-			"title": "3",
+			"title": "UI Elements",
+			"active": "3",
 			"submenu": [
-				"7",
-				"8",
-				"9"
+				"General",
+				"Typography",
+				"Tabs & Accordions",
+				"Modal & Notification",
+				"Widget Boxes",
+				"Media Object",
+				"Buttons",
+				"Font Awesome",
+				"Simple Line Icons",
+				"Ionicons"
 			]
 		},
 		{
-			"title": "4",
+			"title": "Maps",
+			"active": "4",
 			"submenu": [
-				"10",
-				"11",
-				"12"
+				"Google Maps",
+				"Naver Maps",
+				"Daum Maps"
 			]
 		}
 	]

@@ -25,19 +25,17 @@
             </div>
             <div id="sidebar" class="sidebar">
                 <div data-height="100%">
-                    <ul class="nav">
-
-                        <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === 1}" v-on:click="controlActiveClass($event)" v-for="menu in menuList">
-                            <a href="#">{menu.title}</a>
+                    <ul class="nav" v-if="menuList && menuList.length > 0">
+                        <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === menu.active}" v-on:click="controlActiveClass($event)" v-for="menu in menuList" key="index">
+                            <a href="#">{{menu.title}}</a>
                             <ul class="sub-menu">
                                 <li v-for="sub in menu.submenu">
                                     <a href="">
-                                        {sub}
+                                        {{sub}}
                                     </a>
                                 </li>
                             </ul>
                         </li>
-
                     </ul>
                 </div>
             </div>
@@ -50,20 +48,20 @@
     import store from './store';
     import { fetchMenuList } from './actions/main';
     export default {
-        data: () => {
-            const state = store.store.getState().main;
-            console.log(state);
+        data() {
             return {
-                activeMenu: 1,
-                menuList: state.list
+                activeMenu: 0,
+                menuList: this.$select('main').list,
+                menu: this.$select('main')
             }
         },
-
-        mounted: () => {
-            console.log(store.actions);
-            store.dispatch(store.actions.fetchMenuList());
+        mounted() {
+            store.actions.fetchMenuList();
         },
-
+        updated() {
+          console.log('update');
+          console.log(this.$select('main'));
+        },
         methods: {
             controlActiveClass (e) {
                 e.preventDefault();
@@ -78,7 +76,6 @@
                 } else {
                     this.activeMenu = no;
                 }
-
                 $otherSubMenu.not($subMenu).slideUp(250, () => {
                 });
 
