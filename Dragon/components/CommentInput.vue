@@ -13,7 +13,7 @@ export default {
             msg: ''
         }
     },
-    method: {
+    methods: {
         onClickA () {
             this.$store.commit('addCommentToA', {
                 msg: this.msg
