@@ -1,24 +1,26 @@
 <template>
     <div>
         <input type="text" v-model="msg"/>
-        <button type="button" :click="onClickA">add to A</button>
-        <button type="button" :click="onClickB">add to B</button>
+        <button type="button" v-on:click="onClickA">add to A</button>
+        <button type="button" v-on:click="onClickB">add to B</button>
     </div>
 </template>
 
 <script>
 export default {
-    data: {
-        msg: ''
+    data: function() {
+        return {
+            msg: ''
+        }
     },
     method: {
-        onClickA: function (e) {
-            $store.commit('addCommentToA', {
+        onClickA () {
+            this.$store.commit('addCommentToA', {
                 msg: this.msg
             })
         },
-        onClickB: function (e) {
-            $store.commit('addCommentToB', {
+        onClickB () {
+            this.$store.commit('addCommentToB', {
                 msg: this.msg
             })
         }

@@ -16,12 +16,13 @@ export default new Vuex.Store({
             // 변이는 무조건 동기적
             state.comments_A.push(payload.msg);
         },
-        addCommentToB (state, msg) {
+        addCommentToB (state, payload) {
             state.comments_B.push(payload.msg);
         }
     },
     actions: { // mutation의 메소드들을 호출하는 액션을 정의
         // 비동기로직은 여기에 넣는다.
+
     },
     getters: { // 상태값을 조작, 계산하여 return, Angular의 filter처럼 사용
         // $store.getters.**** 와 같이 접근할 수 있음
