@@ -4,9 +4,9 @@
         </div>
         <table class="table">
             <tr>
-                <th></th>
-                <th></th>
-                <th></th>
+                <th>no</th>
+                <th>name</th>
+                <th>phone number</th>
                 <th></th>
                 <th></th>
                 <th></th>

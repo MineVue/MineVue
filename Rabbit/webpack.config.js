@@ -68,7 +68,8 @@ var common = {
     resolve: {
         modules: [path.resolve(__dirname, "./src"), path.resolve(__dirname, "./node_modules")],
         alias: {
-            'vue$': 'vue/dist/vue.common.js'
+            'vue$': 'vue/dist/vue.common.js',
+            'store': path.resolve(__dirname, './store.js')
         }
     }
 }

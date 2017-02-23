@@ -26,13 +26,15 @@
             <div id="sidebar" class="sidebar">
                 <div data-height="100%">
                     <ul class="nav" v-if="menuList && menuList.length > 0">
-                        <li class="has-sub" data-no="1" v-bind:class="{ active: activeMenu === menu.active}" v-on:click="controlActiveClass($event)" v-for="menu in menuList" key="index">
-                            <a href="#">{{menu.title}}</a>
+                        <li class="has-sub" v-bind:class="{ active: activeMenu === menu.active}" v-for="menu in menuList" key="index">
+                            <router-link v-on:click.native="slidingSubMenu($event)" v-bind:to="menu.link">
+                                {{menu.title}}
+                            </router-link>
                             <ul class="sub-menu">
                                 <li v-for="sub in menu.submenu">
-                                    <a href="">
-                                        {{sub}}
-                                    </a>
+                                    <router-link v-bind:to="sub.link">
+                                        {{sub.title}}
+                                    </router-link>
                                 </li>
                             </ul>
                         </li>
@@ -40,6 +42,9 @@
                 </div>
             </div>
             <div class="sidebar-bg"></div>
+            <div class="contents">
+                <router-view></router-view>
+            </div>
         </div>
     </div>
 </template>
@@ -63,7 +68,7 @@
           console.log(this.$select('main'));
         },
         methods: {
-            controlActiveClass (e) {
+            slidingSubMenu (e) {
                 e.preventDefault();
                 const $target = $(e.target);
                 const $parent = $target.parent();
@@ -71,11 +76,11 @@
                 const $otherSubMenu = $('.sidebar .nav > li.has-sub > .sub-menu');
                 const no = $parent.data('no');
 
-                if (no === this.activeMenu) {
-                    this.activeMenu = 0;
-                } else {
-                    this.activeMenu = no;
-                }
+                // if (no === this.activeMenu) {
+                //     this.activeMenu = 0;
+                // } else {
+                //     this.activeMenu = no;
+                // }
                 $otherSubMenu.not($subMenu).slideUp(250, () => {
                 });
 
@@ -95,6 +100,10 @@
         font-size: 13px;
         background: #d5d8da;
         color: #30373e;
+    }
+
+    .pace-top {
+        height:100%;
     }
 
     .animated {
@@ -534,5 +543,21 @@
     .sidebar .nav .sub-menu > li > a .caret {
         float: right;
         margin-top: 7px;
+    }
+    .router-link-active {
+        color: #fff !important;
+    }
+    /* contents */
+    .contents {
+        margin-left: 250px;
+        padding:25px;
+        position:relative;
+        min-height:100%;
+    }
+
+    @media (max-width: 767px) {
+        .contents {
+            margin: 0;
+        }
     }
 </style>
