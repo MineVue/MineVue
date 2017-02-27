@@ -2,6 +2,7 @@
 	"list": [
 		{
 			"title": "Dash board",
+			"icon": "fa fa-empire",
 			"link": "/dashboard/v1",
 			"active": "1",
 			"submenu": [
@@ -17,6 +18,7 @@
 		},
 		{
 			"title": "Tables",
+			"icon": "fa fa-table",
 			"link": "/tables/basic",
 			"active": "2",
 			"submenu": [
@@ -32,6 +34,7 @@
 		},
 		{
 			"title": "UI Elements",
+			"icon": "fa fa-diamond",
 			"link": "/ui/general",
 			"active": "3",
 			"submenu": [
@@ -79,6 +82,7 @@
 		},
 		{
 			"title": "Maps",
+			"icon": "fa fa-map",
 			"link": "/maps/google",
 			"active": "4",
 			"submenu": [
