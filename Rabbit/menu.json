@@ -2,42 +2,102 @@
 	"list": [
 		{
 			"title": "Dash board",
+			"icon": "fa fa-empire",
+			"link": "/dashboard/v1",
 			"active": "1",
 			"submenu": [
-				"Dash board V1",
-				"Dash board V2"
+				{
+					"title": "Dash Board V1",
+					"link": "/dashboard/v1"
+				},
+				{
+					"title": "Dash Board V2",
+					"link": "/dashboard/v2"
+				}
 			]
 		},
 		{
 			"title": "Tables",
+			"icon": "fa fa-table",
+			"link": "/tables/basic",
 			"active": "2",
 			"submenu": [
-				"Basic Table"
+				{
+					"title": "Basic Table",
+					"link": "/tables/basic"
+				},
+				{
+					"title": "Pagination",
+					"link": "/tables/pagination"
+				}
 			]
 		},
 		{
 			"title": "UI Elements",
+			"icon": "fa fa-diamond",
+			"link": "/ui/general",
 			"active": "3",
 			"submenu": [
-				"General",
-				"Typography",
-				"Tabs & Accordions",
-				"Modal & Notification",
-				"Widget Boxes",
-				"Media Object",
-				"Buttons",
-				"Font Awesome",
-				"Simple Line Icons",
-				"Ionicons"
+				{
+					"title": "General",
+					"link": "/ui/general"
+				},
+				{
+					"title": "Typography",
+					"link": "/ui/typography"
+				},
+				{
+					"title": "Tabs & Accordions",
+					"link": "/ui/tabsAccordions"
+				},
+				{
+					"title": "Modal & Notification",
+					"link": "/ui/modalNoti"
+				},
+				{
+					"title": "Widget Boxes",
+					"link": "/ui/widgetBoxes"
+				},
+				{
+					"title": "Media Object",
+					"link": "/ui/media"
+				},
+				{
+					"title": "Buttons",
+					"link": "/ui/buttons"
+				},
+				{
+					"title": "Font Awesome",
+					"link": "/ui/fonts"
+				},
+				{
+					"title": "Simple Line Icons",
+					"link": "/ui/icons"
+				},
+				{
+					"title": "Ionicons",
+					"link": "/ui/ionicons"
+				}
 			]
 		},
 		{
 			"title": "Maps",
+			"icon": "fa fa-map",
+			"link": "/maps/google",
 			"active": "4",
 			"submenu": [
-				"Google Maps",
-				"Naver Maps",
-				"Daum Maps"
+				{
+					"title": "Google Maps",
+					"link": "/maps/google"
+				},
+				{
+					"title": "Naver Maps",
+					"link": "/maps/naver"
+				},
+				{
+					"title": "Daum Maps",
+					"link": "/maps/daum"
+				}
 			]
 		}
 	]
