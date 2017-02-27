@@ -13,11 +13,6 @@
 <script>
     export default {
         props: ['isWithIcon', 'iconName', 'isOutline', 'message', 'style', 'size', 'isBlock', 'isDisabled', 'click'],
-        mounted() {
-
-            console.log(this.message);
-            // this.transpillMessage();
-        },
         methods: {
             transpillMessage: function () {
                 return $('.btn' ).html(this.message);
