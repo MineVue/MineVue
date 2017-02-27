@@ -65,18 +65,30 @@
 				{
 					"title": "Buttons",
 					"link": "/ui/buttons"
-				},
+				}
+			]
+		},
+		{
+			"title": "Icons",
+			"icon": "fa fa-font",
+			"link": "/icons/fontawesome",
+			"active": "4",
+			"submenu": [
 				{
 					"title": "Font Awesome",
-					"link": "/ui/fonts"
+					"link": "/icons/fontawesome"
 				},
 				{
-					"title": "Simple Line Icons",
-					"link": "/ui/icons"
+					"title": "Glyphicon",
+					"link": "/icons/glyphicon"
 				},
 				{
 					"title": "Ionicons",
-					"link": "/ui/ionicons"
+					"link": "/icons/ionicons"
+				},
+				{
+					"title": "Simple Line Icons",
+					"link": "/icons/line"
 				}
 			]
 		},
@@ -84,7 +96,7 @@
 			"title": "Maps",
 			"icon": "fa fa-map",
 			"link": "/maps/google",
-			"active": "4",
+			"active": "5",
 			"submenu": [
 				{
 					"title": "Google Maps",

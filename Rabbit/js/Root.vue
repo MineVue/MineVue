@@ -63,7 +63,7 @@
                 const $subMenu = $target.next('.sub-menu');
                 const $otherSubMenu = $('.sidebar .nav > li.has-sub > .sub-menu');
                 const no = $parent.data('no');
-                console.log($parent);
+
                 $otherSubMenu.not($subMenu).slideUp(250, () => {
                     $parent.siblings().removeClass('open');
                 });
