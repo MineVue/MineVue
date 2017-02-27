@@ -23,6 +23,10 @@
 				{
 					"title": "Basic Table",
 					"link": "/tables/basic"
+				},
+				{
+					"title": "Pagination",
+					"link": "/tables/pagination"
 				}
 			]
 		},

@@ -1,32 +1,16 @@
 <template>
     <div class="pace-top">
-        <div id="page-container" class="page-container page-header-fixed page-side-bar-fixed page-with-two-sidebar">
-            <div id="header" class="header navbar navbar-default navbar-fixed-top">
-                <div class="container-flud">
-                    <div class="navbar-header">
-                        <a href="#">CM Admin</a>
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <!-- <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <form class="navbar-form form-input-flat">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Enter keyword..." />
-                                    <button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
-                                </div>
-                            </form>
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
+        <div id="page-container" class="page-container page-side-bar-fixed page-with-two-sidebar">
+            <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+              <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <a class="navbar-brand" href="#">CM ADMIN</a>
+            </nav>
             <div id="sidebar" class="sidebar">
-                <div data-height="100%">
-                    <ul class="nav" v-if="menuList && menuList.length > 0">
-                        <li class="has-sub" v-bind:class="{ active: activeMenu === menu.active}" v-for="menu in menuList" key="index">
+                <nav class="sidebar-nav">
+                    <ul class="nav">
+                        <li class="nav-title has-sub" v-bind:class="{ active: activeMenu === menu.active}" v-for="menu in menuList" key="index">
                             <router-link v-on:click.native="slidingSubMenu($event)" v-bind:to="menu.link">
                                 {{menu.title}}
                             </router-link>
@@ -39,7 +23,7 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
+                </nav>
             </div>
             <div class="sidebar-bg"></div>
             <div class="contents">
@@ -353,6 +337,14 @@
         font-size: 13px;
         font-weight: 300;
         z-index: 1010;
+    }
+    .sidebar .sidebar-nav ul {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+    }
+    .sidebar .sidebar-nav ul li a {
+        display: block;
     }
     .sidebar-bg {
         position: fixed;

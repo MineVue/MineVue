@@ -1,0 +1,7 @@
+{
+    "people": [
+        {"no": 1, "name":"Helen Torres","email":"htorres0@godaddy.com","gender":"Female","language":"Burmese"},
+        {"no": 2, "name":"Margaret Simmons","email":"msimmons1@apache.org","gender":"Female","language":"Malayalam"},
+        {"no": 3, "name":"Andrea Price","email":"aprice2@java.com","gender":"Female","language":"Greek"}
+    ]
+}
